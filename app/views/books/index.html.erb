@@ -1,0 +1,10 @@
+<h1>Books</h1>
+<% @books.each do |book| %>
+
+  <p>本のタイトル</p>
+  <span><%= book.title %></span>
+
+  <p>感想</p>
+  <span><%= book.body %></span>
+
+<% end %>
