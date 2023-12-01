@@ -1,7 +1,8 @@
-<h2>本のタイトル</h2>
+<h4>本のタイトル:</h4>
 <p><%= @book.title %></p>
 
-<h2>感想</h2>
+<h4>感想:</h4>
 <p><%= @book.body %></p>
-<%= link_to "Edit", edit_list_path(@book.id) %>
-<%= link_to "Destroy", destroy_book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+
+<%= link_to "Edit", edit_list_path(@book.id) %> |
+<%= link_to "Back", back_book_path(@book.id) %>
