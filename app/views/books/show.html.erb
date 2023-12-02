@@ -4,5 +4,5 @@
 <h4>感想:</h4>
 <p><%= @book.body %></p>
 
-<%= link_to "Edit", edit_list_path(@book.id) %> |
-<%= link_to "Back", back_book_path(@book.id) %>
+    <%= link_to "Edit", edit_book_path, style: "color:black" %> |
+    <%= link_to "Back", book_path, style: "color:black" %>

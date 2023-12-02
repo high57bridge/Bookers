@@ -9,7 +9,6 @@
 
   <%= f.submit 'Update Book' %>
   
-  <%= link_to "Show", book_path(@book.id) %> |
-  <%= link_to "Back", back_book_path(@book.id) %>
-
-<% end %>
+  <%= link_to "Show", book_path, style: "color:black" %> |
+  <%= link_to "Back", index_book_path, style: "color:black" %>
+  <% end %>

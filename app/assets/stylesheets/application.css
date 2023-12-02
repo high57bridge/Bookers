@@ -32,7 +32,7 @@
 }
 
 table {
-    width: 60%;
+    width: 30%;
 }
 
 .flash-message {
@@ -45,4 +45,14 @@ table {
 
 .flash-message.alert {
     background-color: #dc143c;
+}
+
+span {
+    display: flex;
+    text-align: center;
+}
+
+.flex {
+    width: 60%;
+    flex-direction: column;
 }
