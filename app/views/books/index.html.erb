@@ -1,6 +1,6 @@
 <h1>Books</h1>
-<table class = "table">
-  <thead>
+<table class = "tables">
+  <thead class = "main-c">
     <th>本のタイトル</th>
     <th>感想</th>
     </thead>
@@ -8,12 +8,12 @@
 
 <% @books.each do |book| %>
   <span>
-  <div class = "flex">
-  <%= book.title %>
-  <%= book.body %>
-  <%= link_to "Show", book_path(book.id), style: "color:black" %> |
-  <%= link_to "Edit", edit_book_path(book.id), style: "color:black" %> |
-  <%= link_to "Destroy", destroy_book_path(book.id), style: "color:black", method: :delete, "data-confirm" => "Are you sure?" %>
+  <div class = "main-item">
+    <%= book.title %>
+    <%= book.body %>
+    <%= link_to "Show", book_path(book.id), style: "color:black" %>
+    <%= link_to "Edit", edit_book_path(book.id), style: "color:black" %>
+    <%= link_to "Destroy", destroy_book_path(book.id), style: "color:black", method: :delete, "data-confirm" => "Are you sure?" %>
   </div>
   </span>
 <% end %>
@@ -29,11 +29,12 @@
 
 <%= form_with model: @book,url: '/books',method: :post do |f| %>
 
+<h2>New Book</h2>
   <h4>本のタイトル</h4>
-  <p class = "form"><%= f.text_field :title %></p>
+  <p class = "form" ><%= f.text_field :title %></p>
 
   <h4>感想</h4>
-  <p class = "form"><%= f.text_area :body %></p>
+  <p class = "form" ><%= f.text_area :body, style: "height: 40px;" %></p>
 
-  <%= f.submit 'Create Book' %>
+  <p class = "form"><%= f.submit 'Create Book' %></p>
 <% end %>
